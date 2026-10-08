@@ -1,0 +1,41 @@
+# ============================================================
+# proxies.example.txt
+# ------------------------------------------------------------
+# Ini cuma CONTOH FORMAT. Ganti isinya dengan list proxy lu sendiri
+# di file proxies.txt (yang nggak di-commit ke repo).
+#
+# Cara pakai:
+#   1. cp proxies.example.txt proxies.txt
+#   2. Edit proxies.txt, hapus baris komentar, tempel list proxy lu
+#   3. Jalanin tool — proxies.txt ke-load otomatis
+#
+# Format yang didukung (satu per baris):
+#   ip:port
+#   user:pass@ip:port
+#   ip:port:user:pass
+#   http://ip:port
+#   socks5://ip:port
+#
+# Baris yang diawali '#' di-skip otomatis.
+# ============================================================
+
+# --- Contoh format: ip:port ---
+1.2.3.4:8080
+5.6.7.8:3128
+9.10.11.12:80
+
+# --- Contoh format: user:pass@ip:port ---
+myuser:mypass@13.14.15.16:8080
+another:secret@17.18.19.20:3128
+
+# --- Contoh format: ip:port:user:pass ---
+21.22.23.24:8080:user1:pass1
+25.26.27.28:3128:user2:pass2
+
+# --- Contoh format: scheme://ip:port ---
+http://29.30.31.32:8080
+socks5://33.34.35.36:1080
+
+# --- Contoh komentar dan baris kosong ---
+
+# semua di atas adalah DUMMY, jangan dipakai.
