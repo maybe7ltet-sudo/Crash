@@ -1,33 +1,70 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
+# ============================================================
+# .gitignore
+# ============================================================
+
+# --- Proxy list (JANGAN di-commit) ---
+proxies.txt
+proxies-*.txt
+proxies_*.txt
+!proxies.example.txt
+
+# --- Build artifacts ---
 *.exe
-*.exe~
+*.bin
 *.dll
 *.so
 *.dylib
+crash
+crash-cli
+crash.exe
+crash-cli.exe
 
-# Test binary, built with `go test -c`
+# --- Build directories ---
+/build/
+/dist/
+/out/
+
+# --- Go ---
 *.test
-
-# Code coverage profiles and other test artifacts
 *.out
-coverage.*
-!coverage.go
-*.coverprofile
-profile.cov
+vendor/
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.code-workspace
 
-# Go workspace file
-go.work
-go.work.sum
+# --- OS ---
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# env file
+# --- Logs ---
+*.log
+logs/
+crash.log
+
+# --- Runtime data ---
+*.sqlite
+*.db
+stats.json
+cache/
+
+# --- Secrets / config lokal ---
+config.local.yaml
 .env
+.env.*
+!.env.example
 
-# Editor/IDE
-# .idea/
-# .vscode/
+# --- Certificates / keys ---
+*.key
+*.pem
+*.crt
+!example.crt
+certs/
